@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :phase5s
-  resources :phase4s
-  resources :phase3s
-  resources :phase2s
-  resources :phase1s
+  resources :users, only: [:index, :show, :create, :update, :destroy]
+  resources :phase5s, only: [:show, :create, :update, :destroy]
+  resources :phase4s, only: [:show, :create, :update, :destroy]
+  resources :phase3s, only: [:show, :create, :update, :destroy]
+  resources :phase2s, only: [:show, :create, :update, :destroy]
+  resources :phase1s, only: [:show, :create, :update, :destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
   # route to test your configuration
